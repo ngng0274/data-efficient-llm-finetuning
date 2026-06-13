@@ -8,7 +8,7 @@ Cherry LLM(NAACL'24)의 **IFD(Instruction-Following Difficulty) 기반 데이터
 
 ---
 
-## TL;DR — 결과
+## TL;DR — 결과 요약
 
 ARC-Challenge (0-shot), Qwen2.5-1.5B + LoRA, 선별 비율 20%:
 
