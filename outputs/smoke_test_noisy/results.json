@@ -1,0 +1,6 @@
+{
+  "experiment": "smoke_test_noisy",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "noise_ratio": 0.4,
+  "test_perplexity": 3.894433230986223
+}

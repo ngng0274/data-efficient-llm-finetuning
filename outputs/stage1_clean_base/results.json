@@ -1,0 +1,6 @@
+{
+  "experiment": "stage1_clean_base",
+  "model": "Qwen/Qwen2.5-3B",
+  "noise_ratio": 0.0,
+  "test_perplexity": 3.477559712838259
+}

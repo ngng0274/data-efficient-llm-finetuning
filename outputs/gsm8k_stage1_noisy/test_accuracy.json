@@ -1,0 +1,7 @@
+{
+  "split": "test",
+  "accuracy": 57.1,
+  "n_correct": 571,
+  "n_total": 1000,
+  "n_no_answer": 0
+}

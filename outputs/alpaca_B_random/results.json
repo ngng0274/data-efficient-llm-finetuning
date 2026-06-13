@@ -1,0 +1,14 @@
+{
+  "group": "B",
+  "label": "B_random (random 20%)",
+  "model": "Qwen/Qwen2.5-1.5B",
+  "n_train": 10200,
+  "n_eval": 1000,
+  "num_epochs": 3,
+  "learning_rate": 0.0001,
+  "max_length": 512,
+  "best_eval_loss": 1.270686388015747,
+  "elapsed_min": 78.0,
+  "adapter_path": "outputs/alpaca_B_random\\final_model",
+  "lm_eval_cmd": "lm_eval --model hf \\\n  --model_args pretrained=Qwen/Qwen2.5-1.5B,peft=outputs/alpaca_B_random\\final_model,dtype=bfloat16 \\\n  --tasks arc_challenge,hellaswag \\\n  --device cuda:0 --batch_size 8"
+}

@@ -1,0 +1,6 @@
+{
+  "experiment": "baseline_clean",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "noise_ratio": 0.0,
+  "test_perplexity": 3.5196596146966836
+}

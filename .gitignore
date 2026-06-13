@@ -1,0 +1,46 @@
+# ── Model weights ─────────────────────────────────────────────
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# ── Training artifacts ────────────────────────────────────────
+# (result JSONs and PNGs outside these dirs are kept)
+checkpoint-*/
+final_model/
+
+# ── Third-party reference code ────────────────────────────────
+reference/SemiPEP/
+reference/Cherry_LLM/
+
+# ── HuggingFace cache ─────────────────────────────────────────
+.cache/
+hub/
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ── Virtual environments ──────────────────────────────────────
+.venv/
+venv/
+env/
+*.conda
+conda-env/
+
+# ── Experiment tracking ───────────────────────────────────────
+wandb/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Claude Code project settings ─────────────────────────────
+.claude/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

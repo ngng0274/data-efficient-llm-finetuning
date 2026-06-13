@@ -1,0 +1,38 @@
+# Install PyTorch with CUDA 12.4 FIRST (RTX 4070 Ti / CUDA 12.3 호환):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+torch>=2.2.0
+torchvision>=0.17.0
+torchaudio>=2.2.0
+
+# HuggingFace
+transformers>=4.45.0,<4.48.0
+datasets>=2.20.0
+aiohttp>=3.9.0,<3.10.0    # 3.10+는 Windows SSL 인증서 저장소 오류 유발
+accelerate>=0.33.0
+peft>=0.12.0
+tokenizers>=0.19.0
+huggingface-hub>=0.24.0
+
+# Numerical
+numpy>=1.26.0
+scipy>=1.13.0
+scikit-learn>=1.5.0
+
+# Config & Utilities
+pyyaml>=6.0.1
+tqdm>=4.66.0
+rich>=13.7.0
+pandas>=2.2.0
+
+# Experiment tracking
+wandb>=0.17.0
+tensorboard>=2.17.0
+
+# Evaluation & Visualization
+rouge-score>=0.1.2
+nltk>=3.8.1
+matplotlib>=3.8.0
+
+# Dev
+pytest>=8.2.0
+ipykernel>=6.29.0

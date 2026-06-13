@@ -1,0 +1,51 @@
+model:
+  name: "Qwen/Qwen2.5-1.5B"   # base model
+  dtype: "bfloat16"
+  max_length: 768              # GSM8K CoT: 140-360 tokens typical; 768 covers 99%+
+
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  lora_dropout: 0.05
+  bias: "none"
+
+data:
+  num_train: 6000              # from HF 'train' split (7473 total)
+  num_val:   500               # from HF 'train' split (held out)
+  num_test:  1000              # from HF 'test'  split (1319 total)
+  noise_ratio: 0.50
+  seed: 42
+
+training:
+  experiment_name: "gsm8k_stage1_noisy"
+  output_dir: "outputs/gsm8k_stage1_noisy"
+  num_epochs: 8                # base model needs more epochs; noise divergence visible at later epochs
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 8    # effective batch = 32
+  learning_rate: 2.0e-4             # GSM8K needs stronger signal than Alpaca instruction following
+  lr_scheduler: "cosine"
+  warmup_ratio: 0.10                # base model: longer warmup before full LR
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  bf16: true
+  logging_steps: 20
+  eval_steps: 200
+  save_steps: 200
+
+eval:
+  max_new_tokens: 512          # generation budget for accuracy eval
+  batch_size: 4
+  epoch_subset: 200            # per-epoch eval uses this many test samples (speed)
+                               # final eval always uses all num_test samples
+
+wandb:
+  enabled: false
+  project: "noisy-llm-finetuning"

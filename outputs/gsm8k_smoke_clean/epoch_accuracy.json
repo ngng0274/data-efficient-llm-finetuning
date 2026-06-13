@@ -1,0 +1,62 @@
+{
+  "experiment": "gsm8k_smoke_clean",
+  "noise_ratio": 0.0,
+  "epochs": [
+    {
+      "epoch": 1,
+      "accuracy": 59.0,
+      "n_correct": 59,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 2,
+      "accuracy": 60.0,
+      "n_correct": 60,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 3,
+      "accuracy": 61.0,
+      "n_correct": 61,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 4,
+      "accuracy": 60.0,
+      "n_correct": 60,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 5,
+      "accuracy": 56.0,
+      "n_correct": 56,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 6,
+      "accuracy": 46.0,
+      "n_correct": 46,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 7,
+      "accuracy": 51.0,
+      "n_correct": 51,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 8,
+      "accuracy": 49.0,
+      "n_correct": 49,
+      "n_total": 100,
+      "n_no_answer": 0
+    }
+  ]
+}

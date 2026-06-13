@@ -1,0 +1,70 @@
+{
+  "experiment": "gsm8k_smoke_noisy",
+  "model": "Qwen/Qwen2.5-1.5B",
+  "noise_ratio": 0.5,
+  "num_epochs": 8,
+  "test_perplexity": 1.619644253037569,
+  "split": "test",
+  "accuracy": 55.0,
+  "n_correct": 55,
+  "n_total": 100,
+  "n_no_answer": 0,
+  "epoch_accuracy": [
+    {
+      "epoch": 1,
+      "accuracy": 55.0,
+      "n_correct": 55,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 2,
+      "accuracy": 58.0,
+      "n_correct": 58,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 3,
+      "accuracy": 59.0,
+      "n_correct": 59,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 4,
+      "accuracy": 55.0,
+      "n_correct": 55,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 5,
+      "accuracy": 51.0,
+      "n_correct": 51,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 6,
+      "accuracy": 35.0,
+      "n_correct": 35,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 7,
+      "accuracy": 36.0,
+      "n_correct": 36,
+      "n_total": 100,
+      "n_no_answer": 0
+    },
+    {
+      "epoch": 8,
+      "accuracy": 38.0,
+      "n_correct": 38,
+      "n_total": 100,
+      "n_no_answer": 0
+    }
+  ]
+}

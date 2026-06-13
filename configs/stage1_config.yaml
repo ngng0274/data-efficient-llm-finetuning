@@ -1,0 +1,49 @@
+model:
+  name: "Qwen/Qwen2.5-3B"  # base model; Instruct 결과는 outputs/stage1_{noisy,clean} 에 보존
+  dtype: "bfloat16"
+  max_length: 512
+
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+  lora_dropout: 0.05
+  bias: "none"
+
+data:
+  num_samples: 10000
+  noise_ratio: 0.40            # 40% of training samples will be noisy
+  noise_types:
+    - response_swap            # replace response with another sample's response
+    - truncated_response       # cut response to 10-40% of original
+    - shuffled_sentences       # randomly shuffle sentences in response
+  seed: 42
+  val_ratio: 0.1
+  test_ratio: 0.1
+
+training:
+  experiment_name: "stage1_noisy_base"
+  output_dir: "outputs/stage1_noisy_base"
+  num_epochs: 3
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 8   # effective batch size = 32
+  learning_rate: 1.0e-4            # base model: instruct보다 낮은 LR로 안정 수렴
+  lr_scheduler: "cosine"
+  warmup_ratio: 0.10               # base model: task와 거리가 있어 더 긴 warmup 필요
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  bf16: true
+  logging_steps: 20
+  eval_steps: 200
+  save_steps: 200
+
+wandb:
+  enabled: false
+  project: "noisy-llm-finetuning"
